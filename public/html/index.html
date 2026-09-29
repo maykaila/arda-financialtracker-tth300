@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
     <header class="header">
         <h1>Financial Tracker</h1>
         <nav class="nav-links">
-            <a href="index.html" class="active">Tracker</a>
-            <a href="budget.html">Budgets</a>
-            <a href="goals.html">Goals</a>
-            <a href="analytics.html">Analytics</a>
+            <a href="../html/index.html" class="active">Tracker</a>
+            <a href="../html/budget.html">Budgets</a>
+            <a href="../html/goals.html">Goals</a>
+            <a href="../html/analytics.html">Analytics</a>
         </nav>
     </header>
 
@@ -73,6 +73,35 @@
                         </div>
                     </div>
 
+                    <div class="form-group" id="expense-category-group" style="display: none;">
+                        <label for="transaction-category">Expense Category (Budget)</label>
+                        <select id="transaction-category">
+                            <option value="">Select category</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="expense-mode-group" style="display: none;">
+                        <label for="expense-mode">Expense Mode</label>
+                        <select id="expense-mode">
+                            <option value="budget_spend">Budget Spend</option>
+                            <option value="savings_transfer">Savings Transfer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="expense-goal-group" style="display: none;">
+                        <label for="expense-goal-id">Transfer To Savings Goal</label>
+                        <select id="expense-goal-id">
+                            <option value="">Select savings goal</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="income-goal-group" style="display: none;">
+                        <label for="income-goal-id">Deposit Income To Savings Goal (Optional)</label>
+                        <select id="income-goal-id">
+                            <option value="">Keep as cash (no goal deposit)</option>
+                        </select>
+                    </div>
+
                     <div class="button-group">
                         <button type="submit" id="submit-btn" class="btn btn-primary">Add Transaction</button>
                         <button type="button" id="cancel-btn" class="btn btn-secondary" style="display: none;">Cancel</button>
@@ -82,6 +111,6 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

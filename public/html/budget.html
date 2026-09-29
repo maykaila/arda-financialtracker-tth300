@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Planner - Financial Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Financial Tracker</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
     <header class="header">
         <h1>Monthly Budgets</h1>
         <nav class="nav-links">
-            <a href="index.html">Tracker</a>
-            <a href="budget.html" class="active">Budgets</a>
-            <a href="goals.html">Goals</a>
-            <a href="analytics.html">Analytics</a>
+            <a href="../html/index.html">Tracker</a>
+            <a href="../html/budget.html" class="active">Budgets</a>
+            <a href="../html/goals.html">Goals</a>
+            <a href="../html/analytics.html">Analytics</a>
         </nav>
     </header>
 
@@ -23,17 +23,17 @@
         <section class="overview-grid">
             <div class="card balance-card">
                 <h4>Total Monthly Limit</h4>
-                <h1>₱2,100.00</h1>
+                <h1 id="budget-total-limit">₱0.00</h1>
             </div>
 
             <div class="card summary-box income">
                 <h4>Total Spent</h4>
-                <p>₱1,340.00</p>
+                <p id="budget-total-spent">₱0.00</p>
             </div>
 
             <div class="card summary-box expense">
                 <h4>Remaining</h4>
-                <p>₱760.00</p>
+                <p id="budget-remaining">₱0.00</p>
             </div>
         </section>
 
@@ -42,35 +42,7 @@
             <!-- Left: Active Budgets -->
             <div class="card">
                 <h3>Active Categories</h3>
-                <div class="progress-item">
-                    <div class="progress-labels">
-                        <span class="desc">Groceries & Food</span>
-                        <span class="amount">₱420 / ₱600</span>
-                    </div>
-                    <div class="bar-container">
-                        <div class="bar-fill" style="width: 70%; background-color: #5c93d9;"></div>
-                    </div>
-                </div>
-
-                <div class="progress-item">
-                    <div class="progress-labels">
-                        <span class="desc">Rent & Housing</span>
-                        <span class="amount">₱800 / ₱800</span>
-                    </div>
-                    <div class="bar-container">
-                        <div class="bar-fill" style="width: 100%; background-color: #f26888;"></div>
-                    </div>
-                </div>
-
-                <div class="progress-item">
-                    <div class="progress-labels">
-                        <span class="desc">Internet & Bills</span>
-                        <span class="amount">₱120 / ₱200</span>
-                    </div>
-                    <div class="bar-container">
-                        <div class="bar-fill" style="width: 60%; background-color: #5c93d9;"></div>
-                    </div>
-                </div>
+                <div id="budget-category-list" class="active-categories-list"></div>
             </div>
 
             <!-- Right: Set Budget Form -->
@@ -78,13 +50,13 @@
                 <h3>Set Category Limit</h3>
                 <form id="budget-form">
                     <div class="form-group">
-                        <label for="category">Category</label>
-                        <input type="text" id="category" placeholder="e.g. Dining Out, Utilities" required>
+                        <label for="budget-category">Category</label>
+                        <input type="text" id="budget-category" placeholder="e.g. Dining Out, Utilities" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="limit">Monthly Limit (₱)</label>
-                        <input type="number" id="limit" placeholder="0.00" step="0.01" min="1" required>
+                        <label for="budget-limit">Monthly Limit (₱)</label>
+                        <input type="number" id="budget-limit" placeholder="0.00" step="0.01" min="1" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Save Budget</button>
@@ -93,5 +65,6 @@
         </section>
     </main>
 
+    <script src="../js/script.js"></script>
 </body>
 </html>

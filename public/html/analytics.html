@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics - Financial Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Financial Tracker</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
     <header class="header">
         <h1>Spending Analytics</h1>
         <nav class="nav-links">
-            <a href="index.html">Tracker</a>
-            <a href="budget.html">Budgets</a>
-            <a href="goals.html">Goals</a>
-            <a href="analytics.html" class="active">Analytics</a>
+            <a href="../html/index.html">Tracker</a>
+            <a href="../html/budget.html">Budgets</a>
+            <a href="../html/goals.html">Goals</a>
+            <a href="../html/analytics.html" class="active">Analytics</a>
         </nav>
     </header>
 
@@ -23,17 +23,17 @@
         <section class="overview-grid">
             <div class="card balance-card">
                 <h4>Savings Rate</h4>
-                <h1>76.5%</h1>
+                <h1 id="analytics-savings-rate">0.0%</h1>
             </div>
 
             <div class="card summary-box income">
                 <h4>Daily Avg. Spend</h4>
-                <p>₱24.19</p>
+                <p id="analytics-daily-avg">₱0.00</p>
             </div>
 
             <div class="card summary-box expense">
                 <h4>Largest Expense</h4>
-                <p>₱500.00</p>
+                <p id="analytics-largest-expense">₱0.00</p>
             </div>
         </section>
 
@@ -42,26 +42,11 @@
             <!-- Left: Breakdown Table -->
             <div class="card">
                 <h3>Expense Distribution</h3>
-                <div class="retro-table">
+                <div id="analytics-distribution" class="retro-table">
                     <div class="table-row table-head">
                         <span>Category</span>
                         <span>Share</span>
                         <span>Total Spent</span>
-                    </div>
-                    <div class="table-row">
-                        <span>Subscriptions</span>
-                        <span>66.7%</span>
-                        <span>₱500.00</span>
-                    </div>
-                    <div class="table-row">
-                        <span>Groceries</span>
-                        <span>20.0%</span>
-                        <span>₱150.00</span>
-                    </div>
-                    <div class="table-row">
-                        <span>Utilities</span>
-                        <span>13.3%</span>
-                        <span>₱100.00</span>
                     </div>
                 </div>
             </div>
@@ -71,15 +56,16 @@
                 <h3>System Insights</h3>
                 <div class="insight-box">
                     <h4>Healthy Cash Flow</h4>
-                    <p>Your income is currently outpacing your expenses by <strong>₱2,450.00</strong> this cycle.</p>
+                    <p id="analytics-cashflow-text">Your income and expenses will appear here once transactions are loaded.</p>
                 </div>
                 <div class="insight-box" style="margin-top: 15px; border-left-color: #f26888;">
                     <h4>Top Expense Alert</h4>
-                    <p>Subscription and internet costs represent over <strong>60%</strong> of your total outflow.</p>
+                    <p id="analytics-top-expense-text">Your top spending category will appear here after loading analytics data.</p>
                 </div>
             </div>
         </section>
     </main>
 
+    <script src="../js/script.js"></script>
 </body>
 </html>
